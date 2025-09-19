@@ -1,3 +1,10 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* App-level overrides */
+html,
+body,
+#root {
+  height: 100%;
+}
