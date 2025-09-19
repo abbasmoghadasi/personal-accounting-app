@@ -26,3 +26,19 @@ Built as a **resume‑quality** full‑stack project with production‑grade too
 ---
 
 ## 🗂 Repository Layout (planned)
+
+**.github/workflows** → CI/CD pipelines
+**apps/** → Application entrypoints (web, api)
+**packages/** → Shared libraries (@acme/ui, @acme/config, @acme/types)
+**docs/** → Documentation + ADRs
+
+## 📜 Decision Log
+
+We use [Architecture Decision Records (ADR)](https://adr.github.io/) to document key technical decisions.  
+Each ADR is immutable — new decisions create new ADRs, old ones may be marked **Superseded**.
+
+| No.  | Title                | Status   | Link                                                               |
+| ---- | -------------------- | -------- | ------------------------------------------------------------------ |
+| 0001 | Shared Configuration | Accepted | [docs/adr/0001-shared-config.md](./docs/adr/0001-shared-config.md) |
+
+---
