@@ -1,26 +1,20 @@
 import React from 'react';
-import { Button } from '@/components/ui/button';
 import { useAppStore } from '@/store/useAppStore';
+import AppShell from '@/components/layout/AppShell';
+import DashboardHome from '@/components/dashboard/DashboardHome.tsx';
 
 export default function App() {
-  const { theme, toggleTheme } = useAppStore();
+  const { theme } = useAppStore();
 
   return (
-    <main
-      className={`p-6 space-y-4 min-h-screen transition-colors ${
-        theme === 'light'
-          ? 'bg-gray-100 text-gray-900'
-          : 'bg-gray-900 text-gray-100'
-      }`}
-    >
-      <h1 className="text-3xl font-bold text-blue-600 dark:text-blue-400">
-        Hello Nudle Accounting 👋
-      </h1>
-
-      <Button onClick={toggleTheme}>
-        Switch to {theme === 'light' ? 'Dark' : 'Light'} Mode
-      </Button>
-      <Button variant="outline">Outline button</Button>
+    <main className={theme === 'light' ? 'bg-gray-100' : 'bg-gray-900'}>
+      <AppShell
+        title="داشبورد مالی"
+        subtitle="یکشنبه، ۲۰ مهر ۱۴۰۴"
+        // action={<Button>افزودن تراکنش +</Button>} // you can override header action if needed
+      >
+        <DashboardHome />
+      </AppShell>
     </main>
   );
 }
